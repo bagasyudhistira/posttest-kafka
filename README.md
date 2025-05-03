@@ -23,7 +23,7 @@ Proyek ini adalah layanan Spring Boot untuk memproses event `Order` melalui Kafk
 
     CREATE TABLE posttest.orders (
     order_id VARCHAR PRIMARY KEY,
-    product_name VARCHAR,
+    product_name VARCHAR NOT NULL,
     order_quantity INT NOT NULL
     );
     ```
@@ -54,6 +54,7 @@ Proyek ini adalah layanan Spring Boot untuk memproses event `Order` melalui Kafk
 2. Contoh JSON yang Dikirim
     - CREATE:
 
+    *Wajib untuk mengisi semua field, tidak bernilai null*
     ```json
     {
         "operation": "CREATE",
@@ -78,7 +79,8 @@ Proyek ini adalah layanan Spring Boot untuk memproses event `Order` melalui Kafk
     }
     ```
     - DELETE:
-    
+
+    *Cukup menyertakan orderId saja*
     ```json
     {
         "operation": "DELETE",

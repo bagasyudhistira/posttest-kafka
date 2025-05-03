@@ -72,8 +72,8 @@ Proyek ini adalah layanan Spring Boot untuk memproses event `Order` melalui Kafk
         "operation": "UPDATE",
         "data": {
             "orderId": "ORD001",
-            "productName": "AirPods Pro",
-            "orderQuantity": 2
+            "productName": "AirPods Pro 2",
+            "orderQuantity": null
         }
     }
     ```

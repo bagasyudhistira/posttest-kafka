@@ -1,0 +1,29 @@
+{
+  "type": "record",
+  "name": "OrderEvent",
+  "namespace": "id.co.ogya.posttest.kafka.model",
+  "fields": [
+    {
+      "name": "operation",
+      "type": {
+        "type": "enum",
+        "name": "OperationType",
+        "symbols": ["CREATE", "UPDATE", "DELETE"]
+      }
+    },
+    {
+      "name": "data",
+      "type": {
+        "type": "record",
+        "name": "Order",
+        "fields": [
+          { "name": "orderId", "type": "string" },
+          { "name": "productName", "type": ["null", "string"], "default": null },
+          { "name": "orderQuantity", "type": ["null", "int"], "default": null }
+        ]
+      }
+    }
+  ]
+}
+
+

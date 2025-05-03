@@ -1,0 +1,28 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    properties:
+      schema.registry.url: http://localhost:8081
+      specific.avro.reader: true
+      specific.avro.value.type: id.co.ogya.posttest.kafka.model.Order
+      value.subject.name.strategy: io.confluent.kafka.serializers.subject.TopicRecordNameStrategy
+    consumer:
+      group-id: order-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+    listener:
+      missing-topics-fatal: false
+    auto-create-topics: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/kafka_training
+    username: admin
+    password: admin
+    driver-class-name: org.postgresql.Driver
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: id.co.ogya.posttest.kafka.model

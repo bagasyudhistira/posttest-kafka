@@ -53,6 +53,7 @@ Proyek ini adalah layanan Spring Boot untuk memproses event `Order` melalui Kafk
     ```
 2. Contoh JSON yang Dikirim
     - CREATE:
+
     ```json
     {
         "operation": "CREATE",
@@ -77,6 +78,7 @@ Proyek ini adalah layanan Spring Boot untuk memproses event `Order` melalui Kafk
     }
     ```
     - DELETE:
+    
     ```json
     {
         "operation": "DELETE",

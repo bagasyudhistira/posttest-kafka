@@ -7,7 +7,7 @@ Proyek ini adalah layanan Spring Boot untuk memproses event `Order` melalui Kafk
 1. **Clone repository**
    ```bash
    git clone https://github.com/bagasyudhistira/posttest-kafka.git
-   cd posttest.kafka
+   cd posttest-kafka
    ```
 
 2. **Jalankan Kafka, Schema Registry, dan PostgreSQL dengan Docker Compose**

@@ -6,7 +6,7 @@ Proyek ini adalah layanan Spring Boot untuk memproses event `Order` melalui Kafk
 
 1. **Clone repository**
    ```bash
-   git remote add origin https://github.com/bagasyudhistira/posttest-kafka.git
+   git clone https://github.com/bagasyudhistira/posttest-kafka.git
    cd posttest.kafka
    ```
 
